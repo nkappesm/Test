@@ -1,0 +1,30 @@
+<h1>Pedidos Index</h1>
+<p>Informacion de todos los pedidos</p>
+
+<%= flash[:notice] %>
+<table>
+  <thead>
+    <tr>
+      <th>Fecha Pedido</th>
+      <th>Hora Pedido</th>
+      <th>Direccion ID</th>
+      <th>Rut</th>
+      <th>Fecha Entrega</th>
+      <th>SKU</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.fecha %></td>
+        <td><%= pedido.hora %></td>
+        <td><%= pedido.direccion %></td>
+        <td><%= pedido.rut %></td>
+        <td><%= pedido.entrega %></td>
+        <td><%= pedido.sku %></td>
+        <td><%= pedido.cantidad %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
